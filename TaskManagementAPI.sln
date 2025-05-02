@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementAPI", "TaskManagementAPI\TaskManagementAPI.csproj", "{99A6558E-A12D-4468-B631-DECC7164E91A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementApi.Test", "TaskManagementApi.Test\TaskManagementApi.Test.csproj", "{BC29D948-8C0D-41D7-9260-F0A86B1B54CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99A6558E-A12D-4468-B631-DECC7164E91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A6558E-A12D-4468-B631-DECC7164E91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A6558E-A12D-4468-B631-DECC7164E91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A6558E-A12D-4468-B631-DECC7164E91A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC29D948-8C0D-41D7-9260-F0A86B1B54CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC29D948-8C0D-41D7-9260-F0A86B1B54CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC29D948-8C0D-41D7-9260-F0A86B1B54CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC29D948-8C0D-41D7-9260-F0A86B1B54CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F061FCE7-2987-4D0B-8A7A-A279A02AB8CB}
+	EndGlobalSection
+EndGlobal
