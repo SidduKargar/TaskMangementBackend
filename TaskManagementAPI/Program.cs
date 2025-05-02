@@ -9,7 +9,12 @@ using TaskManagementAPI.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//------------------------Add services to the container.------------------------//
+// Configure port for Railway
+// The PORT environment variable is set by Railway
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+//Add services to the container.
 builder.Services.AddControllers();
 
 builder.Services.AddControllers()
@@ -18,7 +23,7 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
     });
 
-//------------------------Add in-memory database------------------------//
+//Add in-memory database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseInMemoryDatabase("TaskManagementDb"));
 
@@ -27,7 +32,7 @@ builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 
-//--------------Add JWT Authentication--------------------//
+//Add JWT Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -49,7 +54,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Task Management API", Version = "v1" });
 
-    //-------------Configure Swagger to use JWT Authentication------------//
+    //Configure Swagger to use JWT Authentication
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
@@ -77,7 +82,7 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-//--------Configure the HTTP request pipeline.---------------//
+//Configure the HTTP request pipeline.
 
 app.UseSwagger();
 app.UseSwaggerUI();
