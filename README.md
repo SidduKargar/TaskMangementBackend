@@ -30,7 +30,7 @@ Make sure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/TaskManagementAPI.git
+git clone https://github.com/SidduKargar/TaskMangementBackend.git
 ```
 ### 2. Run with .NET CLI
 ```bash
