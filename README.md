@@ -1,6 +1,6 @@
 # TaskManagementAPI
 
-A simple Task Management REST API built with .NET 8, Entity Framework Core (In-Memory), and JWT authentication. Designed to manage tasks with features like user authentication, task creation, and status updates.
+A simple Task Management REST API built with .NET 8, Entity Framework Core (In-Memory), and JWT authentication. Designed to manage tasks with features like user authentication, and task creation
 
 ## Features
 
@@ -31,26 +31,47 @@ Make sure you have the following installed:
 
 ```bash
 git clone https://github.com/your-username/TaskManagementAPI.git
-cd TaskManagementAPI
-2. Run with .NET CLI
-
+```
+### 2. Run with .NET CLI
+```bash
 cd TaskManagementAPI
 dotnet build
 dotnet run
+```
 The API will start on:
-
+```bash
 Http:- http://localhost:8080
 IIS:- http://localhost:21562
+```
 
-3. Run with Docker (Optional)
-
-docker build -t taskmanagementapi .
-docker run -d -p 5000:80 taskmanagementapi
-
-Http:- http://localhost:8080
-IIS:- http://localhost:21562
-
-4. Run Tests
+### 3. Run Tests
+```bash
+cd ..
 cd TaskManagementAPI.Test
 dotnet test
+```
+### 4 Folder Structure
+```bash
+TaskManagementAPI/ # Root solution directory
+│
+├── TaskManagementAPI/ # Main .NET API project
+│ ├── Controllers/ 
+│ ├── Models/
+  ├── DTOs/ 
+│ ├── DataAccess/ # EF Core DB context
+│ ├── Services/ 
+│ ├── appsettings.json
+│ └── Program.cs 
+│
+├── TaskManagementAPI.Test/ # Test project (xUnit)
+│ ├── Controllers/
+| ├── Services/
+| ├── Mocks/ 
+|
+├── .dockerignore # Docker ignore rules
+├── .editorconfig # Code style settings
+├── Dockerfile # Docker build instructions
+├── README.md # Project documentation
+└── TaskManagementAPI.sln # Solution file
+
 ```
